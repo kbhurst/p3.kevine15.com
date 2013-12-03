@@ -9,7 +9,7 @@
   <meta name="description" content="P3">
   <meta name="author" content="Kevin Hurst">
 
-  <link rel="stylesheet" href="css/styles.css">
+ <!-- <link rel="stylesheet" href="css/styles.css">  -->
 
 </head>
 
@@ -88,14 +88,47 @@
 	
 		<!--the store is incorporated in Delaware and based in Utah so taxes must be added to Utah-->
 		<select id = "shipping-states">
-			<option value = "">- SELECT -</option>
+			<option value = "">-- select one --</option>     <!--set to null to for error checking-->
 			<option value = "UT">Utah (Sales tax of 6.85%)</option>
 			<option value = "US">All other states</option>
 		</select>
-
+	<br>
+	<br>
+	 <div id = "shipping methods">
+		<label for = "shipping-methods">Shipping method:</label>
+		<select id = "shipping-methods">
+			<option value = "">-- select one--</option>    <!--set to null to for error checking-->
+			<option value = "Pickup">Pick up (free)</option>
+			<option value = "USPS">United States Post Office ($2/item)</option>
+			<option value = "FedEx">FedEx excluding Alaska and Hawaii($3/item)</option>
+			<option value = "FedExAH">FedEx for Alaska and Hawaii($4/item)</option>
+			
+			<!--add in option for free shipping on orders over $100-->
+	</div>	
+	 
+	 <!--add in estimate button-->
+	 
+	 <div class = "estimateTotal">
+		<label for = "estimateButton">Click to estimate total:</label>
+		<input type = "submit" value = "Estimate Total" id = "estimateButton">
+		<input type = "text" id = "estimateBox" placeholder = "$0.00">
+		
+		<br>
+		
+		<!--place holder for results-->
+		<div id = "orderSummary"></div>
+	</div>
+	
+	</div>  <!--shipping methods end-->
+	
+	
+		
 	</form>   <!--end of form-->
 
-
-  <script src="js/p3.js"></script>
+	
+	
+	
+	
+ <script src="js/p3.js"></script> 
 </body>
 </html>
