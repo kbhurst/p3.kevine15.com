@@ -75,6 +75,22 @@
 					<input type = "text" id="orderGloves" size = "2" placeholder = "0">
 				</div>
 		</div>
+		
+		
+			<div class = "products">	
+		 <h3>Socks</h3>
+		 <p>Nobody wants cold feet</p>
+
+				<div class = "itemPrice">
+					<span>Each pair of hand made socks for $15</span>
+				</div>
+
+				<div class = "orderQuantity">
+					<label for = "orderSocks">Order Quantity:</label>
+					<input type = "text" id="orderSocks" size = "2" placeholder = "0">
+				</div>
+		</div>
+		
 
  		<div id = "shippingCosts">
 		</div>
@@ -87,7 +103,7 @@
 		<label for = "shipping-states">State:</label>
 	
 		<!--the store is incorporated in Delaware and based in Utah so taxes must be added to Utah-->
-		<select id = "shipping-states">
+		<select id = "shipping-states" required>
 			<option value = "">-- select one --</option>     <!--set to null to for error checking-->
 			<option value = "UT">Utah (Sales tax of 6.85%)</option>
 			<option value = "US">All other states</option>
@@ -95,8 +111,9 @@
 	<br>
 	<br>
 	 <div id = "shipping methods">
+	 <h3>Free shipping on orders of $200 or more</h3>
 		<label for = "shipping-methods">Shipping method:</label>
-		<select id = "shipping-methods">
+		<select id = "shipping-methods" required>
 			<option value = "">-- select one--</option>    <!--set to null to for error checking-->
 			<option value = "Pickup">Pick up (free)</option>
 			<option value = "USPS">United States Post Office ($2/item)</option>
@@ -129,6 +146,6 @@
 	
 	
 	
- <script src="js/p3.js"></script> 
+ <script src="p3.js"></script> 
 </body>
 </html>
