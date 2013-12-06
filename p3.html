@@ -9,24 +9,26 @@
   <meta name="description" content="P3">
   <meta name="author" content="Kevin Hurst">
 
- <!-- <link rel="stylesheet" href="css/styles.css">  -->
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
 
 <body>
-
+<div id="wrapper">
 	<h1>Shopping Calculator</h1>
 	<p>I plan on using this in P4. It was more complicated than I originally thought it would be with error checking and calculating taxes.</p>
 
 
 	<!--Create the main form-->
 	<!--Give the form a class and break down the items into products-->
-
+<div id = "leftside">
 	<form class = "shoppingBag" id="shoppingBagItems">
+
 		<div class = "products">
 		 <h2>Outerwear</h2>
 		 <br>
+		
 		 <h3>Hats</h3>
 		 <p>Keep them warm in style</p>
 
@@ -90,7 +92,7 @@
 					<input type = "text" id="orderSocks" size = "2" placeholder = "0">
 				</div>
 		</div>
-		
+
 
  		<div id = "shippingCosts">
 		</div>
@@ -133,18 +135,19 @@
 		<br>
 		
 		<!--place holder for results-->
-		<div id = "orderSummary"></div>
-	</div>
+	
 	
 	</div>  <!--shipping methods end-->
 	
 	
 		
 	</form>   <!--end of form-->
+		</div> <!--end of shipping state -->
+	</div>  <!--left side-->	
+</div> <!--end of wrapper div-->
+	
+	<div id = "orderSummary"></div>
 
-	
-	
-	
 	
  <script src="p3.js"></script> 
 </body>
