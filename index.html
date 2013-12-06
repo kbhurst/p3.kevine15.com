@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>P3 Shipping</title>
+  <meta name="description" content="P3">
+  <meta name="author" content="Kevin Hurst">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+<div id="outsideWrapper">
+	<h1>Shopping Calculator</h1>
+	
+
+	<!--Create the main form-->
+	<!--Give the form a class and break down the items into products-->
+<div id = "insideWrapperLeft">
+	<form class = "shoppingBag" id="shoppingBagItems">
+		<div class = "products">
+	
+		 <h3>Hats</h3>
+		 <p>Keep them warm in style</p>
+
+				<div class = "itemPrice">
+					<span>Each hand made hat is only $20</span>
+				</div>
+				
+				<!--I found I creating labels and id's made it easier with Javascript -->
+
+				<div class = "orderQuantity">
+					<label for = "orderHats">Order Quantity:</label>
+					<input type = "text" id="orderHats" size = "2" placeholder = "0">
+				</div>
+		</div>
+
+			<!--Copy and paste then modify values-->
+
+		<div class = "products">		
+		 <h3>Coats</h3>
+		 <p>Kids will loose them so get two!</p>
+
+				<div class = "itemPrice">
+					<span>Each coat is only $50</span>
+				</div>
+
+				<div class = "orderQuantity">
+					<label for = "orderCoats">Order Quantity:</label>
+					<input type = "text" id="orderCoats" size = "2" placeholder = "0">
+				</div>
+		</div>
+			<!--Add in different sizes -->
+
+
+			<!--Copy and paste then modify values-->
+			
+		<div class = "products">	
+		 <h3>Gloves</h3>
+		 <p>Great for snowball fights</p>
+
+				<div class = "itemPrice">
+					<span>Each pair of hand made gloves is only $25</span>
+				</div>
+
+				<div class = "orderQuantity">
+					<label for = "orderGloves">Order Quantity:</label>
+					<input type = "text" id="orderGloves" size = "2" placeholder = "0">
+				</div>
+		</div>
+		
+		
+		<div class = "products">	
+		 <h3>Socks</h3>
+		 <p>Nobody wants cold feet</p>
+
+				<div class = "itemPrice">
+					<span>Each pair of hand made socks for $15</span>
+				</div>
+
+				<div class = "orderQuantity">
+					<label for = "orderSocks">Order Quantity:</label>
+					<input type = "text" id="orderSocks" size = "2" placeholder = "0">
+				</div>
+		</div>
+
+
+ 		<div id = "shippingCosts">
+		</div>
+
+<!--Now work on shipping and taxes-->
+	<br>
+	<br>
+	
+	<div id = "shippingTaxes">
+	 <h3>Estimate Shipping and Taxes</h3>
+	  <div class = "shipping state">
+		<label for = "shipping-states">State:</label>
+	
+		<!--the store is incorporated in Delaware and based in Utah so taxes must be added to Utah-->
+		<select id = "shipping-states" required>
+			<option value = "">-- select one --</option>     <!--set to null to for error checking-->
+			<option value = "UT">Utah (Sales tax of 6.85%)</option>
+			<option value = "US">All other states</option>
+		</select>
+	  </div>
+	</div>
+	
+	<br>
+	 <div id = "shippingMethods">
+	 <p>Free shipping on orders of $200 or more</p>
+		<label for = "shipping-methods">Shipping method:</label>
+		<select id = "shipping-methods" required>
+			<option value = "">-- select one--</option>    <!--set to null to for error checking-->
+			<option value = "Pickup">Pick up (free)</option>
+			<option value = "USPS">United States Post Office ($2/item)</option>
+			<option value = "FedEx">FedEx excluding Alaska and Hawaii($3/item)</option>
+			<option value = "FedExAH">FedEx for Alaska and Hawaii($4/item)</option>
+		</select>
+	</div>	
+
+	<br>
+
+	<h3>Estimate costs</h3>
+	 <!--add in estimate button-->
+	 
+	 <div class = "estimateTotal">
+	  <p>Free shipping on orders of $200 or more</p>
+		<label for = "estimateButton">Click to estimate total:</label>
+		<input type = "submit" value = "Estimate Total" id = "estimateButton">
+		<input type = "text" id = "estimateBox" placeholder = "$0.00">
+	 </div>  
+			
+	</form>   <!--end of form-->
+   
+   </div> <!--end of main div -->  
+
+     <div id = "orderSummary"></div>
+ 
+ </div> <!--end of wrapper div-->	
+	
+   <script src="p3.js"></script> 
+
+</body>
+
+</html>
