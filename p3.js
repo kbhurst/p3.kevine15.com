@@ -1,4 +1,4 @@
-
+//Kevin Hurst
   //add in event listener for form
 	
 	document.getElementById('shoppingBagItems').addEventListener('submit', estimateOrderTotal, false);
