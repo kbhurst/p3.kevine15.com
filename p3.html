@@ -8,27 +8,22 @@
   <title>P3 Shipping</title>
   <meta name="description" content="P3">
   <meta name="author" content="Kevin Hurst">
-
   <link rel="stylesheet" href="styles.css">
 
 </head>
 
 
 <body>
-<div id="wrapper">
+<div id="outsideWrapper">
 	<h1>Shopping Calculator</h1>
-	<p>I plan on using this in P4. It was more complicated than I originally thought it would be with error checking and calculating taxes.</p>
-
+	
 
 	<!--Create the main form-->
 	<!--Give the form a class and break down the items into products-->
-<div id = "leftside">
+<div id = "insideWrapperLeft">
 	<form class = "shoppingBag" id="shoppingBagItems">
-
 		<div class = "products">
-		 <h2>Outerwear</h2>
-		 <br>
-		
+	
 		 <h3>Hats</h3>
 		 <p>Keep them warm in style</p>
 
@@ -79,7 +74,7 @@
 		</div>
 		
 		
-			<div class = "products">	
+		<div class = "products">	
 		 <h3>Socks</h3>
 		 <p>Nobody wants cold feet</p>
 
@@ -98,10 +93,12 @@
 		</div>
 
 <!--Now work on shipping and taxes-->
-
+	<br>
+	<br>
+	
 	<div id = "shippingTaxes">
-	 <h2>Estimate Shipping and Taxes</h2>
-	 <div class = "shipping state">
+	 <h3>Estimate Shipping and Taxes</h3>
+	  <div class = "shipping state">
 		<label for = "shipping-states">State:</label>
 	
 		<!--the store is incorporated in Delaware and based in Utah so taxes must be added to Utah-->
@@ -110,10 +107,12 @@
 			<option value = "UT">Utah (Sales tax of 6.85%)</option>
 			<option value = "US">All other states</option>
 		</select>
+	  </div>
+	</div>
+	
 	<br>
-	<br>
-	 <div id = "shipping methods">
-	 <h3>Free shipping on orders of $200 or more</h3>
+	 <div id = "shippingMethods">
+	 <p>Free shipping on orders of $200 or more</p>
 		<label for = "shipping-methods">Shipping method:</label>
 		<select id = "shipping-methods" required>
 			<option value = "">-- select one--</option>    <!--set to null to for error checking-->
@@ -121,34 +120,31 @@
 			<option value = "USPS">United States Post Office ($2/item)</option>
 			<option value = "FedEx">FedEx excluding Alaska and Hawaii($3/item)</option>
 			<option value = "FedExAH">FedEx for Alaska and Hawaii($4/item)</option>
-			
-			<!--add in option for free shipping on orders over $100-->
+		</select>
 	</div>	
-	 
+
+	<br>
+
+	<h3>Estimate costs</h3>
 	 <!--add in estimate button-->
 	 
 	 <div class = "estimateTotal">
+	  <p>Free shipping on orders of $200 or more</p>
 		<label for = "estimateButton">Click to estimate total:</label>
 		<input type = "submit" value = "Estimate Total" id = "estimateButton">
 		<input type = "text" id = "estimateBox" placeholder = "$0.00">
-		
-		<br>
-		
-		<!--place holder for results-->
-	
-	
-	</div>  <!--shipping methods end-->
-	
-	
-		
+	 </div>  
+			
 	</form>   <!--end of form-->
-		</div> <!--end of shipping state -->
-	</div>  <!--left side-->	
-</div> <!--end of wrapper div-->
-	
-	<div id = "orderSummary"></div>
+   
+   </div> <!--end of main div -->  
 
+     <div id = "orderSummary"></div>
+ 
+ </div> <!--end of wrapper div-->	
 	
- <script src="p3.js"></script> 
+   <script src="p3.js"></script> 
+
 </body>
+
 </html>
